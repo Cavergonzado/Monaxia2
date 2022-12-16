@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Monaxia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //Headings
+    <string name="heading_one">Do what you can, with what you\'ve got, where you are.</string>
+    <string name="heading_two">It\'s not time to worry yet.</string>
+    <string name="heading_three">It\'s not stress that kills us. It is our reaction to it.</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_sha1">SHA1</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_text_inhale">Inhale</string>
+    <string name="settings_text_exhale">Exhale</string>
+    <string name="settings_text_hold">Hold</string>
+    <string name="settings_text_close">Close</string>
+
+    //NotepadStrings
+    <string name="note_subtitle">Note Subtitle</string>
+    <string name="type_note_here">type note here</string>
+    <string name="Type_note_here">Type_note_here</string>
+    <string name="miscellaneous">miscellaneous</string>
+</resources>
