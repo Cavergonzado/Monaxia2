@@ -4,28 +4,31 @@
     package="com.example.monaxia1">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".BreatheApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_monaxia"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round1"
         android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Monaxia1">
         <activity
-            android:name=".activities.CreateNoteActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden"
+            android:name=".ForgotPassword"
             android:exported="false" />
+        <activity
+            android:name=".activities.CreateNoteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".MainActivity" />
-       <activity android:name=".activities.NoteFunction"
-           android:screenOrientation="portrait"
-           android:windowSoftInputMode="stateHidden"
-           android:exported="true"/>
-
+        <activity
+            android:name=".activities.NoteFunction"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Login"
             android:exported="false" />

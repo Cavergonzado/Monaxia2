@@ -49,7 +49,6 @@ public class CreateNoteActivity extends AppCompatActivity {
         inputNoteText = findViewById(R.id.inputNote);
         textDateTime = findViewById(R.id.textDateTime);
         viewSubtitleIndicator  =findViewById(R.id.viewSubtitle);
-
         textDateTime.setText(
                 new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm a", Locale.getDefault())
                         .format(new Date())
@@ -235,25 +234,25 @@ public class CreateNoteActivity extends AppCompatActivity {
             }
         }
 
-        if(alreadyAvailableNote != null){
-            layoutMiscellaneous.findViewById(R.id.layoutDelete).setVisibility(View.VISIBLE);
-            layoutMiscellaneous.findViewById(R.id.layoutDelete).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                    showDeleteNoteDialog();
-                }
-            });
-        }
+      if(alreadyAvailableNote != null){
+          layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setVisibility(View.VISIBLE);
+          layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                showDeleteNoteDialog();
+              }
+          });
+      }
 
     }
 
-    private void showDeleteNoteDialog(){
+    private  void showDeleteNoteDialog(){
         if(dialogDeleteNote == null){
             AlertDialog.Builder builder = new AlertDialog.Builder(CreateNoteActivity.this);
             View view = LayoutInflater.from(this).inflate(
                     R.layout.layout_delete_note,
-                    (ViewGroup) findViewById(R.id.layoutDeleteNoteContainer)
+                    (ViewGroup)  findViewById(R.id.layoutDeleteNoteContainer)
             );
             builder.setView(view);
             dialogDeleteNote = builder.create();
@@ -267,8 +266,8 @@ public class CreateNoteActivity extends AppCompatActivity {
 
                         @Override
                         protected Void doInBackground(Void... voids) {
-                           NotesDatabase.getDatabase(getApplicationContext()).noteDao()
-                                   .deleteNote(alreadyAvailableNote);
+                            NotesDatabase.getDatabase(getApplicationContext()).noteDao()
+                                    .deleteNote(alreadyAvailableNote);
                             return null;
                         }
 
@@ -284,7 +283,6 @@ public class CreateNoteActivity extends AppCompatActivity {
                     new DeleteNoteTask().execute();
                 }
             });
-
             view.findViewById(R.id.textCancel).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -295,6 +293,7 @@ public class CreateNoteActivity extends AppCompatActivity {
 
         dialogDeleteNote.show();
     }
+
 
     private void setSubtitleIndicatorColor(){
         GradientDrawable gradientDrawable = (GradientDrawable) viewSubtitleIndicator.getBackground();

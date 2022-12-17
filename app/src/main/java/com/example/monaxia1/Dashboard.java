@@ -28,8 +28,10 @@ public class Dashboard extends AppCompatActivity {
         logout = findViewById(R.id.logout);
         username1 = findViewById(R.id.username);
 
-        String username2 = getIntent().getStringExtra("keyname");
-        username1.setText("Hello " + username2);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("NAME");
+
+        username1.setText(name);
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override

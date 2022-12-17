@@ -21,4 +21,7 @@
     <string name="type_note_here">type note here</string>
     <string name="Type_note_here">Type_note_here</string>
     <string name="miscellaneous">miscellaneous</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="are_you_sure_you_want_to_delete_this_note">Are you sure you want to delete this note?</string>
+    <string name="cancel">cancel</string>
 </resources>

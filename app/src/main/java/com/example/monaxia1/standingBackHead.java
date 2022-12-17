@@ -34,6 +34,7 @@ public class standingBackHead extends AppCompatActivity {
         mButtonStartPause = findViewById(R.id.StartButton);
         mButtonReset = findViewById(R.id.ResetButton);
         TInstruction = findViewById(R.id.instructionBtn);
+        arrowback = findViewById(R.id.arrowBack);
 
         arrowback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +117,7 @@ public class standingBackHead extends AppCompatActivity {
         mTimeLeftInMillis = START_TIME_IN_MILLIS;
         updateCountDownText();
         mButtonReset.setVisibility(View.INVISIBLE);
+        mButtonStartPause.setVisibility(View.VISIBLE);
     }
 
     private void updateCountDownText(){

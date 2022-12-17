@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/landing_page"
     tools:context=".activities.NoteFunction">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:fontFamily="@font/ubuntu_bold1"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="@dimen/_20ssp"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -28,7 +28,8 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_8sdp"
-        android:background="@drawable/bg_search"
+        android:background="@color/white"
+        android:elevation="@dimen/_20sdp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="@dimen/_10sdp"
@@ -62,71 +63,32 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/notesRecyclerV"
-        android:layout_marginStart="@dimen/_2sdp"
-        android:layout_marginEnd="@dimen/_2sdp"
         android:clipToPadding="false"
+        android:elevation="@dimen/_20sdp"
         android:paddingStart="0dp"
         android:paddingEnd="@dimen/_12sdp"
         android:paddingBottom="@dimen/_12sdp"
-        app:layout_constraintBottom_toTopOf="@id/layoutQuick"
-        app:layout_constraintTop_toBottomOf="@id/layoutSearch"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layoutQuick"
-        android:background="@color/colorQuickActionBg"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:layout_width="@dimen/_23sdp"
-            android:layout_height="@dimen/_23sdp"
-            android:id="@+id/imageAdd"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_add"
-            app:tint="@color/colorIcons" />
-
-        <ImageView
-            android:layout_width="@dimen/_23sdp"
-            android:layout_height="@dimen/_23sdp"
-            android:id="@+id/addImage"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_image"
-            app:tint="@color/colorIcons" />
-
-        <ImageView
-            android:layout_width="@dimen/_23sdp"
-            android:layout_height="@dimen/_23sdp"
-            android:id="@+id/addImae"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_baseline_language_24"
-            app:tint="@color/colorIcons" />
-
-    </LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@id/layoutSearch"
+        tools:layout_editor_absoluteX="2dp" />
 
 
     <ImageView
+        android:id="@+id/imageAddNote"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
-        android:id="@+id/imageAddNote"
-        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
         android:background="@drawable/bg_add_btn"
+        android:layout_marginBottom="@dimen/_30sdp"
         android:contentDescription="@string/app_name"
         android:padding="@dimen/_5sdp"
+        android:elevation="@dimen/_20sdp"
         android:src="@drawable/ic_baseline_add_24"
-        app:layout_constraintBottom_toTopOf="@id/layoutQuick"
-        app:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/layoutQuick"/>
+        app:tint="@color/colorPrimary" />
 
 
 

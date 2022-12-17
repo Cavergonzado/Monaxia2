@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/landing_page"
     tools:context=".activities.CreateNoteActivity">
 
     <ScrollView
@@ -30,7 +30,7 @@
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/colorIcons" />
+                app:tint="@color/black" />
 
             <ImageView
                 android:layout_width="@dimen/_20sdp"
@@ -41,7 +41,7 @@
                 android:contentDescription="@string/app_name"
                 android:padding="@dimen/_4sdp"
                 android:src="@drawable/ic_check"
-                app:tint="@color/colorIcons"
+                app:tint="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/imageBack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/imageBack"/>
@@ -51,12 +51,14 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_regular"
                 android:id="@+id/textDateTime"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:includeFontPadding="false"
                 android:textColor="@color/colorIcons"
                 android:textSize="10.00sp"
                 app:layout_constraintEnd_toEndOf="@id/inputNote"
                 app:layout_constraintStart_toStartOf="@id/inputNoteTitle"
                 app:layout_constraintTop_toBottomOf="@id/inputNoteTitle"/>
+
 
             <EditText
                 android:id="@+id/inputNoteTitle"
@@ -65,26 +67,33 @@
                 android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
-                android:background="@null"
+                android:background="@drawable/search_btn"
                 android:fontFamily="@font/ubuntu_bold1"
                 android:hint="Note Title"
                 android:imeOptions="actionDone"
+                android:paddingStart="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp"
                 android:importantForAutofill="no"
                 android:includeFontPadding="false"
                 android:inputType="text"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="@color/colorTextHint"
                 android:textSize="@dimen/_16ssp"
                 app:layout_constraintTop_toBottomOf="@id/imageBack"/>
+
+
+
 
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/inputSubtitle"
                 android:layout_marginStart="@dimen/_25sdp"
-                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_27sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
-                android:background="@null"
+                android:background="@drawable/search_btn"
+                android:paddingStart="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp"
                 android:fontFamily="@font/ubuntu_medium"
                 android:hint="@string/note_subtitle"
                 android:importantForAutofill="no"
@@ -92,7 +101,7 @@
                 android:inputType="textMultiLine"
                 android:paddingTop="@dimen/_8sdp"
                 android:paddingBottom="@dimen/_8sdp"
-                android:textColor="@color/colorTextSubtitle"
+                android:textColor="@color/black"
                 android:textColorHint="@color/colorTextHint"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -118,16 +127,19 @@
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_15sdp"
-                android:background="@null"
+                android:background="@drawable/search_btn"
+                android:elevation="@dimen/_3sdp"
                 android:fontFamily="@font/ubuntu_regular"
                 android:gravity="top"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
                 android:hint="Type note here"
                 android:importantForAutofill="no"
                 android:includeFontPadding="false"
                 android:inputType="textMultiLine"
                 android:minHeight="@dimen/_100sdp"
                 android:textColorHint="@color/colorTextHint"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/inputSubtitle"/>

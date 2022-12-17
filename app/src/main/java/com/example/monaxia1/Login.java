@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.monaxia1.activities.NoteFunction;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -22,8 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
-    Button Login;
-    TextView createAccount;
+    Button Login, createAccount;
+    TextView forgotPass1;
     TextInputEditText emailAdd ,password;
     String emailPattern = "^[A-Za-z0-9+_.-]+@(.+)$";
     ProgressDialog progressDialog;
@@ -45,6 +44,15 @@ public class Login extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
+        forgotPass1 = findViewById(R.id.forgotPass);
+
+        forgotPass1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentFP = new Intent(Login.this, ForgotPassword.class);
+                startActivity(intentFP);
+            }
+        });
 
 
 
@@ -98,7 +106,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
-        Intent intent = new Intent(Login.this, NoteFunction.class);
+        Intent intent = new Intent(Login.this, Dashboard.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

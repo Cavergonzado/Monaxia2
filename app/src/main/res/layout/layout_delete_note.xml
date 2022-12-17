@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layoutDeleteNoteContainer"
     android:layout_gravity="center"
     android:layout_margin="@dimen/_10sdp"
@@ -16,8 +16,8 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_delete"
-        app:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
@@ -27,7 +27,7 @@
         android:layout_marginEnd="@dimen/_8sdp"
         android:fontFamily="@font/ubuntu_bold1"
         android:includeFontPadding="false"
-        android:text="Delete note"
+        android:text="@string/delete_note"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"
         app:layout_constraintBottom_toBottomOf="@id/imageDeleteNote"
@@ -36,9 +36,9 @@
         app:layout_constraintTop_toTopOf="@id/imageDeleteNote"/>
 
     <TextView
-        android:id="@+id/textDeleteMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/textDeleteNoteMessage"
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
@@ -47,7 +47,7 @@
         android:includeFontPadding="false"
         android:paddingStart="@dimen/_8sdp"
         android:paddingEnd="@dimen/_8sdp"
-        android:text="Are you sure you want to delete this ntoe ?"
+        android:text="@string/are_you_sure_you_want_to_delete_this_note"
         android:textColor="@color/white"
         android:textSize="@dimen/_13ssp"
         app:layout_constraintTop_toBottomOf="@id/imageDeleteNote"/>
@@ -62,13 +62,13 @@
         android:fontFamily="@font/ubuntu_medium"
         android:includeFontPadding="false"
         android:padding="@dimen/_8sdp"
-        android:text="Delete Note"
+        android:text="Delete note"
         android:textAllCaps="true"
         android:textColor="@color/colorDelete"
         android:textSize="@dimen/_13ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textDeleteMessage"/>
+        app:layout_constraintTop_toBottomOf="@id/textDeleteNoteMessage"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,12 +80,13 @@
         android:fontFamily="@font/ubuntu_medium"
         android:includeFontPadding="false"
         android:padding="@dimen/_8sdp"
-        android:textAllCaps="true"
-        android:textSize="@dimen/_13ssp"
+        android:text="CANCEL"
         android:textColor="@color/colorNoteColor2"
-        android:text="Cancel"
+        android:textSize="@dimen/_13ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/textDeleteNote"
-        app:layout_constraintTop_toBottomOf="@id/textDeleteMessage"/>
+        app:layout_constraintTop_toBottomOf="@id/textDeleteNoteMessage"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@ public class PhysicalActivity extends AppCompatActivity {
         arrow_back = findViewById(R.id.arrowBack);
 
         button1 = findViewById(R.id.reverseTraBtn);
-        button2 = findViewById(R.id.vsitBtn);
+        button2 = findViewById(R.id.standingBackHeadBtn);
         button3 = findViewById(R.id.chatarungaBtn);
         button4 = findViewById(R.id.pigeonPoseBtn);
         button5 = findViewById(R.id.headstand_pose);

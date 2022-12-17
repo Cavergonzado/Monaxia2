@@ -4,7 +4,10 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -21,11 +24,13 @@ import com.example.monaxia1.listeners.NotesListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NoteFunction extends AppCompatActivity implements NotesListener {
+public class NoteFunction extends AppCompatActivity implements NotesListener  {
 
     public  static final int REQUEST_CODE_ADD_NOTE = 1;
     public static final int REQUEST_CODE_UPDATE_NOTE = 2;
     public static final int REQUEST_CODE_SHOW_NOTES =3;
+
+
 
     private RecyclerView notesRecyclerView;
     private List<NoteClass> noteList;
@@ -62,7 +67,28 @@ public class NoteFunction extends AppCompatActivity implements NotesListener {
 
         getNotes(REQUEST_CODE_SHOW_NOTES,false);
 
+        EditText inputSearch = findViewById(R.id.inputSearch);
+        inputSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                notesAdapter.cancelTimer();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(noteList.size() !=0){
+                    notesAdapter.searchNotes(s.toString());
+                }
+            }
+        });
+
     }
+
 
     @Override
     public void onNoteClicked(NoteClass noteClass, int position) {
@@ -123,4 +149,5 @@ public class NoteFunction extends AppCompatActivity implements NotesListener {
             getNotes(REQUEST_CODE_UPDATE_NOTE, data.getBooleanExtra("isNoteDeleted",false));
         }
     }
+
 }

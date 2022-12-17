@@ -14,7 +14,7 @@ import java.util.Locale;
 
 public class bountAnglePose extends AppCompatActivity {
 
-    private static final long START_TIME_IN_MILLIS = 600000;
+    private static final long START_TIME_IN_MILLIS = 3000000;
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
@@ -73,7 +73,6 @@ public class bountAnglePose extends AppCompatActivity {
         });
 
         updateCountDownText();
-
     }
 
     private void openDialog() {
@@ -116,6 +115,7 @@ public class bountAnglePose extends AppCompatActivity {
         mTimeLeftInMillis = START_TIME_IN_MILLIS;
         updateCountDownText();
         mButtonReset.setVisibility(View.INVISIBLE);
+        mButtonStartPause.setVisibility(View.VISIBLE);
     }
 
     private void updateCountDownText(){

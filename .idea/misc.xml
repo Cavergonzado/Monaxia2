@@ -44,9 +44,11 @@
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/location.xml" value="0.20092592592592592" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/logout.xml" value="0.2203125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/main_bg.xml" value="0.2203125" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/miscellaneous_btn.xml" value="0.1125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/navigation.xml" value="0.2203125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/rounded_corner.xml" value="0.2203125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/rounder_corner1.xml" value="0.2203125" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/search_btn.xml" value="0.1125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/splash_screen.xml" value="0.2203125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/drawable/tab_indicator.xml" value="0.2203125" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_add_notes.xml" value="0.21" />
@@ -58,17 +60,18 @@
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_breathing_exercise.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_chaturanga_pose.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_corpse_post.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_create_note.xml" value="0.21" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_create_note.xml" value="0.22" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_elderly_exercises.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_forgot_password.xml" value="0.22" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_head_stand_pose.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_home.xml" value="0.12" />
-        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_lotus_pose.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_music_player.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_navigation.xml" value="0.2" />
-        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_note_function.xml" value="0.15" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_note_function.xml" value="0.2" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_note_pad.xml" value="0.1" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_notepad_function.xml" value="0.25" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/activity_notes.xml" value="0.22" />
@@ -102,6 +105,7 @@
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/item_container_note1.xml" value="0.1721014492753623" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/item_view.xml" value="0.2" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/layout_delete_note.xml" value="0.33" />
+        <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/layout_delete_note1.xml" value="0.15217391304347827" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/layout_miscellaneous.xml" value="0.25" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/music_items.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/CHRISTIAN/AndroidStudioProjects/Monaxia1/app/src/main/res/layout/navigation.xml" value="0.21" />

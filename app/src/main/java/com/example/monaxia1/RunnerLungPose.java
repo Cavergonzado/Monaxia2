@@ -14,7 +14,7 @@ import java.util.Locale;
 
 public class RunnerLungPose extends AppCompatActivity {
 
-    private static final long START_TIME_IN_MILLIS = 600000;
+    private static final long START_TIME_IN_MILLIS = 20000;
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
@@ -118,6 +118,7 @@ public class RunnerLungPose extends AppCompatActivity {
         mTimeLeftInMillis = START_TIME_IN_MILLIS;
         updateCountDownText();
         mButtonReset.setVisibility(View.INVISIBLE);
+        mButtonStartPause.setVisibility(View.VISIBLE);
     }
 
     private void updateCountDownText(){

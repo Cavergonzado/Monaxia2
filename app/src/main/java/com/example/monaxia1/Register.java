@@ -60,6 +60,12 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 PerforAuth();
+                String name = fullName.getText().toString();
+
+                Intent intent = new Intent(Register.this, Dashboard.class);
+                intent.putExtra("NAME", name);
+                startActivity(intent);
+
             }
 
 
@@ -91,7 +97,7 @@ public class Register extends AppCompatActivity {
                     if(task.isSuccessful())
                     {
                         progressDialog.dismiss();
-                        sendUserToNextActivity();
+                      //  sendUserToNextActivity();
                         Toast.makeText(Register.this, "Registration Successfully", Toast.LENGTH_SHORT).show();
                     }else{
                         progressDialog.dismiss();
