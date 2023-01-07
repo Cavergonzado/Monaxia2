@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.monaxia1.R;
-import com.example.monaxia1.entities.NoteClass;
+import com.example.monaxia1.entities.Notes;
 import com.example.monaxia1.listeners.NotesListener;
 
 import java.util.ArrayList;
@@ -29,13 +29,13 @@ import io.realm.Realm;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder> {
     Context context;
-    private List<NoteClass> noteClasses;
+    private List<Notes>  notes;
     private NotesListener notesListener;
     private Timer timer;
-    private List<NoteClass> noteSource;
+    private List<Notes> noteSource;
 
-    public NotesAdapter(List<NoteClass> noteClasses, NotesListener notesListener) {
-        this.noteClasses = noteClasses;
+    public NotesAdapter(List<Notes> noteClasses, NotesListener notesListener) {
+        this. notes = noteClasses;
         this.notesListener = notesListener;
         noteSource = noteClasses;
     }
@@ -57,12 +57,12 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
 
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-        holder.setNote(noteClasses.get(position = holder.getAdapterPosition()));
+        holder.setNote( notes.get(position = holder.getAdapterPosition()));
         int finalPosition = position;
         holder.layoutNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                notesListener.onNoteClicked(noteClasses.get(finalPosition), finalPosition);
+                notesListener.onNoteClicked( notes.get(finalPosition), finalPosition);
             }
         });
 
@@ -78,7 +78,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
                     if(item.getTitle().equals("DELETE")){
                         Realm realm = Realm.getDefaultInstance();
                         realm.beginTransaction();
-                        noteClasses.remove(0);
+                        notes.remove(0);
                         realm.commitTransaction();
                     }
 
@@ -96,7 +96,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
 
     @Override
     public int getItemCount() {
-        return noteClasses.size();
+        return  notes.size();
     }
 
     @Override
@@ -116,7 +116,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
             layoutNote = itemView.findViewById(R.id.layoutNote);
         }
 
-        void setNote(NoteClass noteClass) {
+        void setNote(Notes noteClass) {
             textTitle1.setText(noteClass.getTitle());
             if (noteClass.getSubTitle().trim().isEmpty()) {
                 textSubtitle.setVisibility(View.GONE);
@@ -140,17 +140,17 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
             @Override
             public void run() {
                 if (searchKeyword.trim().isEmpty()) {
-                    noteClasses = noteSource;
+                    notes = noteSource;
                 } else {
-                    ArrayList<NoteClass> temp = new ArrayList<>();
-                    for (NoteClass noteClass : noteSource) {
+                    ArrayList<Notes> temp = new ArrayList<>();
+                    for (Notes noteClass : noteSource) {
                         if (noteClass.getTitle().toLowerCase().contains(searchKeyword.toLowerCase())
                                 || noteClass.getSubTitle().toLowerCase().contains(searchKeyword.toLowerCase())
                                 || noteClass.getNoteText().toLowerCase().contains(searchKeyword.toLowerCase())) {
                             temp.add(noteClass);
                         }
                     }
-                    noteClasses = temp;
+                    notes = temp;
                 }
                 new Handler(Looper.getMainLooper()).post(new Runnable() {
                     @Override

@@ -9,6 +9,14 @@
     android:background="@drawable/landing_page"
     tools:context=".Register">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="169dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:src="@drawable/monaxia_logo" />
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -122,7 +130,7 @@
         android:elevation="20dp"
         android:text="Register"
         android:shadowColor="@color/black"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20dp" />
 
 
@@ -132,8 +140,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
+        android:textColor="@color/active"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
         android:text="Already have account? Login"/>
 

@@ -7,10 +7,10 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import com.example.monaxia1.dao.NoteDao;
-import com.example.monaxia1.entities.NoteClass;
+import com.example.monaxia1.entities.Notes;
 
 
-@Database(entities = NoteClass.class, version = 1, exportSchema = false)
+@Database(entities = Notes.class, version = 1, exportSchema = false)
 public abstract class NotesDatabase extends RoomDatabase {
 
     private static NotesDatabase notesDatabase;

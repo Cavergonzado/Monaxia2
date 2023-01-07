@@ -62,6 +62,7 @@
                            android:layout_height="wrap_content"
                            android:fontFamily="monospace"
                            android:padding="5dp"
+                           android:layout_marginStart="@dimen/_3sdp"
                            android:text="REVERSED TRIANGLE POSE"
                            android:textColor="#ff000000"
                            android:textSize="21.0dp"
@@ -71,8 +72,9 @@
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:padding="5dp"
+                           android:layout_marginStart="@dimen/_3sdp"
                            android:textColor="#ffff5722"
-                           android:text="Every Day 15 Min"
+                           android:text="1 Minute"
                            android:textStyle="bold"/>
 
 
@@ -140,6 +142,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="monospace"
                             android:padding="5dp"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:text="STANDING BACK HEAD"
                             android:textColor="#ff000000"
                             android:textSize="21.0dp"
@@ -150,7 +153,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:text="1 Minute"
                             android:textStyle="bold"/>
 
 
@@ -220,6 +224,7 @@
                             android:fontFamily="monospace"
                             android:padding="5dp"
                             android:text="CHATURANGA"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
@@ -228,8 +233,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="1 Minute"
                             android:textStyle="bold"/>
 
 
@@ -297,6 +303,7 @@
                             android:text="PIGEON POSE"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
                         <TextView
@@ -304,7 +311,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="1 Minute"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 
@@ -373,6 +381,7 @@
                             android:padding="5dp"
                             android:text="HEADSTAND POSE"
                             android:textColor="#ff000000"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
 
@@ -381,7 +390,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="5 Seconds"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 
@@ -448,6 +458,7 @@
                             android:fontFamily="monospace"
                             android:padding="5dp"
                             android:text="LOTUS POSE"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
@@ -457,7 +468,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="1 Minute"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 
@@ -523,6 +535,7 @@
                             android:fontFamily="monospace"
                             android:padding="5dp"
                             android:text="BOUND ANGLE POSE"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
@@ -532,7 +545,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="5 Minutes"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 
@@ -596,6 +610,7 @@
                             android:fontFamily="monospace"
                             android:padding="5dp"
                             android:text="RUNNER'S LUNGE POSE"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
@@ -605,7 +620,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="10 - 20 seconds"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 
@@ -669,6 +685,7 @@
                             android:fontFamily="monospace"
                             android:padding="5dp"
                             android:text="STANDING SIDE STRETCH"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
@@ -678,7 +695,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="1 Minute"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 
@@ -742,6 +760,7 @@
                             android:fontFamily="monospace"
                             android:padding="5dp"
                             android:text="CORPSE POSE"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textColor="#ff000000"
                             android:textSize="20.0dp"
                             android:textStyle="bold"/>
@@ -751,7 +770,8 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="Every Day 15 Min"
+                            android:text="5 Minutes"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 
 

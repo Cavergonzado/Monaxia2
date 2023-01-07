@@ -31,21 +31,21 @@ public class SettingsDialog extends Dialog {
         getWindow().getAttributes().windowAnimations = R.style.Theme_SettingsDialog;
 
         radioGroup = findViewById(R.id.rg_gradients);
-        SeekBar inhaleSeekBar = findViewById(R.id.seekBar_inhale);
-        SeekBar exhaleSeekBar = findViewById(R.id.seekBar_exhale);
-        SeekBar holdSeekBar = findViewById(R.id.seekBar_hold);
+//        SeekBar inhaleSeekBar = findViewById(R.id.seekBar_inhale);
+//        SeekBar exhaleSeekBar = findViewById(R.id.seekBar_exhale);
+//        SeekBar holdSeekBar = findViewById(R.id.seekBar_hold);
         Button closeButton = findViewById(R.id.btn_close);
 
         radioGroup.setOnCheckedChangeListener(checkedChangeListener);
-        inhaleSeekBar.setOnSeekBarChangeListener(inhaleSeekBarChangeListener);
-        exhaleSeekBar.setOnSeekBarChangeListener(exhaleSeekBarChangeListener);
-        holdSeekBar.setOnSeekBarChangeListener(holdSeekBarChangeListener);
+//        inhaleSeekBar.setOnSeekBarChangeListener(inhaleSeekBarChangeListener);
+//        exhaleSeekBar.setOnSeekBarChangeListener(exhaleSeekBarChangeListener);
+//        holdSeekBar.setOnSeekBarChangeListener(holdSeekBarChangeListener);
         closeButton.setOnClickListener(closeBtnClickListener);
 
         ((RadioButton) radioGroup.getChildAt(SettingsUtils.getSelectedPreset())).setChecked(true);
-        inhaleSeekBar.setProgress(SettingsUtils.getSelectedInhaleDuration() / Constants.MILLISECOND);
-        exhaleSeekBar.setProgress(SettingsUtils.getSelectedExhaleDuration() / Constants.MILLISECOND);
-        holdSeekBar.setProgress(SettingsUtils.getSelectedHoldDuration() / Constants.MILLISECOND);
+//        inhaleSeekBar.setProgress(SettingsUtils.getSelectedInhaleDuration() / Constants.MILLISECOND);
+//        exhaleSeekBar.setProgress(SettingsUtils.getSelectedExhaleDuration() / Constants.MILLISECOND);
+//        holdSeekBar.setProgress(SettingsUtils.getSelectedHoldDuration() / Constants.MILLISECOND);
     }
 
     private RadioGroup.OnCheckedChangeListener checkedChangeListener = new RadioGroup.OnCheckedChangeListener() {

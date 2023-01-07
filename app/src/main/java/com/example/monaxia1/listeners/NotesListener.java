@@ -1,7 +1,7 @@
 package com.example.monaxia1.listeners;
 
-import com.example.monaxia1.entities.NoteClass;
+import com.example.monaxia1.entities.Notes;
 
 public interface NotesListener {
-    void onNoteClicked(NoteClass noteClass, int position);
+    void onNoteClicked(Notes noteClass, int position);
 }

@@ -32,6 +32,9 @@
                 android:layout_marginTop="12dp"
                 android:text="Modified Pigeon Pose"
                 android:textSize="30sp"
+                android:textColor="#4A4745"
+                android:fontFamily="@font/ubuntu_bold1"
+                android:layout_gravity="center"
                 android:textStyle="bold"
 
                 />

@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.monaxia1"
-        minSdk 21
-        targetSdk 32
+        minSdk 22
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -28,19 +28,22 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    compileSdkVersion 32
-    buildToolsVersion '32.0.0'
+    compileSdkVersion 33
+    buildToolsVersion '33.0.0'
     buildFeatures {
         viewBinding true
     }
 }
 
 dependencies {
-
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.firebase:firebase-auth:21.1.0'
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-database'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.ar.sceneform:filament-android:1.17.1'
 
@@ -49,8 +52,8 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:2.4.3"
 
     testImplementation 'junit:junit:'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'com.mikhaellopez:circularimageview:4.3.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
@@ -65,8 +68,17 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-auth:20.4.0'
 
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
+
+        implementation 'com.karumi:dexter:6.2.3'
+
+        implementation 'com.gusakov:pulse-countdown:1.1.0-rc1'
+        implementation 'com.squareup.picasso:picasso:2.8'
+        implementation 'com.android.support:multidex:1.0.3'
+        implementation 'com.makeramen:roundedimageview:2.3.0'
     })
+
+
 
 }

@@ -1,6 +1,7 @@
 package com.example.monaxia1.activities;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,10 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.example.monaxia1.Dashboard;
 import com.example.monaxia1.R;
 import com.example.monaxia1.adapters.NotesAdapter;
 import com.example.monaxia1.database.NotesDatabase;
-import com.example.monaxia1.entities.NoteClass;
+import com.example.monaxia1.entities.Notes;
 import com.example.monaxia1.listeners.NotesListener;
 
 import java.util.ArrayList;
@@ -33,8 +35,9 @@ public class NoteFunction extends AppCompatActivity implements NotesListener  {
 
 
     private RecyclerView notesRecyclerView;
-    private List<NoteClass> noteList;
+    private List<Notes> noteList;
     private NotesAdapter notesAdapter;
+    private ImageView arrowback;
 
 
     private int noteClickedPosition = -1;
@@ -43,6 +46,18 @@ public class NoteFunction extends AppCompatActivity implements NotesListener  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_function);
+
+
+        arrowback = findViewById(R.id.arrowBack);
+        arrowback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(NoteFunction.this, Dashboard.class);
+                startActivity(intent1);
+            }
+        });
+
+
 
         ImageView imageAddNoteMain = findViewById(R.id.imageAddNote);
         imageAddNoteMain.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +71,8 @@ public class NoteFunction extends AppCompatActivity implements NotesListener  {
         });
 
         notesRecyclerView = findViewById(R.id.notesRecyclerV);
+
+
         notesRecyclerView.setLayoutManager(
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         );
@@ -91,7 +108,7 @@ public class NoteFunction extends AppCompatActivity implements NotesListener  {
 
 
     @Override
-    public void onNoteClicked(NoteClass noteClass, int position) {
+    public void onNoteClicked(Notes noteClass, int position) {
         noteClickedPosition = position;
         Intent intent = new Intent(getApplicationContext(), CreateNoteActivity.class);
         intent.putExtra("isViewOrUpdate", true);
@@ -103,31 +120,32 @@ public class NoteFunction extends AppCompatActivity implements NotesListener  {
 
 
             @SuppressLint("StaticFieldLeak")
-            class GetNotesTask extends AsyncTask<Void, Void, List<NoteClass>> {
+            class GetNotesTask extends AsyncTask<Void, Void, List<Notes>> {
                 @Override
-                protected List<NoteClass> doInBackground(Void... voids) {
+                protected List<Notes> doInBackground(Void... voids) {
                     return NotesDatabase
                             .getDatabase(getApplicationContext())
                             .noteDao().getAllNotes();
                 }
 
                 @Override
-                protected void onPostExecute(List<NoteClass> noteClasses) {
-                    super.onPostExecute(noteClasses);
+                protected void onPostExecute(List<Notes> notes) {
+                    super.onPostExecute(notes);
                     if (requestCode == REQUEST_CODE_SHOW_NOTES){
-                        noteList.addAll(noteClasses);
+                        noteList.addAll(notes);
                         notesAdapter.notifyDataSetChanged();
                     }else if(requestCode == REQUEST_CODE_ADD_NOTE){
-                        noteList.add(0, noteClasses.get(0));
+                        noteList.add(0, notes.get(0));
                         notesAdapter.notifyItemInserted(0);
                         notesRecyclerView.smoothScrollToPosition(0);
                     }else if (requestCode == REQUEST_CODE_UPDATE_NOTE){
                         noteList.remove(noteClickedPosition);
+
                         if(isNoteDeleted){
                             notesAdapter.notifyItemRemoved(noteClickedPosition);
                         }
                         else{
-                            noteList.add(noteClickedPosition, noteClasses.get(noteClickedPosition));
+                            noteList.add(noteClickedPosition, notes.get(noteClickedPosition));
                             notesAdapter.notifyItemChanged(noteClickedPosition);
                         }
                     }
@@ -144,10 +162,12 @@ public class NoteFunction extends AppCompatActivity implements NotesListener  {
         if(requestCode == REQUEST_CODE_ADD_NOTE && resultCode == RESULT_OK){
             getNotes(REQUEST_CODE_ADD_NOTE, false);
         }
-        else if(requestCode == REQUEST_CODE_UPDATE_NOTE && resultCode == RESULT_OK);
-        if(data != null){
-            getNotes(REQUEST_CODE_UPDATE_NOTE, data.getBooleanExtra("isNoteDeleted",false));
+        else if(requestCode == REQUEST_CODE_UPDATE_NOTE && resultCode == RESULT_OK){
+            if(data != null){
+                getNotes(REQUEST_CODE_UPDATE_NOTE, data.getBooleanExtra("isNoteDeleted",false));
+            }
         }
+
     }
 
 }

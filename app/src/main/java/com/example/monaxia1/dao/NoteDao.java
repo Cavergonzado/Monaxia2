@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.monaxia1.entities.NoteClass;
+import com.example.monaxia1.entities.Notes;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ import java.util.List;
 public interface NoteDao {
 
     @Query("SELECT * FROM notes ORDER BY id DESC")
-    List<NoteClass> getAllNotes();
+    List<Notes> getAllNotes();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertNote(NoteClass noteClass);
+    void insertNote(Notes noteClass);
 
     @Delete
-    void deleteNote(NoteClass noteClass);
+    void deleteNote(Notes noteClass);
 
 }

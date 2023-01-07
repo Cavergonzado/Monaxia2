@@ -9,13 +9,15 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.monaxia1.activities.BeginnerPhysicalActivity;
+import com.example.monaxia1.activities.MusicFunction;
 import com.example.monaxia1.activities.NoteFunction;
+import com.example.monaxia1.activities.YogaExercises;
 
 public class Dashboard extends AppCompatActivity {
 
     CardView card1, card2, card3, card4;
-    Button logout;
-    TextView username1;
+    Button logout, dashIntruction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,17 +28,23 @@ public class Dashboard extends AppCompatActivity {
         card3 = findViewById(R.id.notepad);
         card4 = findViewById(R.id.MusicPlayer);
         logout = findViewById(R.id.logout);
-        username1 = findViewById(R.id.username);
+        dashIntruction = findViewById(R.id.QuestionBtn);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("NAME");
 
-        username1.setText(name);
+        dashIntruction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
+
 
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(Dashboard.this, BreathingExercise.class);
+                Intent intent1 = new Intent(Dashboard.this, breathingExerciseCountButton.class);
                 startActivity(intent1);
             }
         });
@@ -44,7 +52,7 @@ public class Dashboard extends AppCompatActivity {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(Dashboard.this, PhysicalActivity.class);
+                Intent intent2 = new Intent(Dashboard.this, YogaExercises.class);
                 startActivity(intent2);
             }
         });
@@ -60,7 +68,7 @@ public class Dashboard extends AppCompatActivity {
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4 = new Intent(Dashboard.this, MusicPlayer.class);
+                Intent intent4 = new Intent(Dashboard.this, MusicFunction.class);
                 startActivity(intent4);
             }
         });
@@ -72,5 +80,10 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(intent5);
             }
         });
+    }
+
+    private void openDialog() {
+        InstructionDashboardDialog dialogReverse = new InstructionDashboardDialog();
+        dialogReverse.show(getSupportFragmentManager(), "Example Dialog");
     }
 }

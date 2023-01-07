@@ -48,7 +48,7 @@ class SettingsUtils {
     public static int getSelectedHoldDuration() {
         int duration = BreathePreferences.getInstance().getInt(BreathePreferences
                 .SELECTED_HOLD_DURATION_KEY);
-        return duration != -1 ? duration : Constants.DEFAULT_DURATION;
+        return duration != -1 ? duration : Constants.HOLD_DURATION;
     }
 
 }

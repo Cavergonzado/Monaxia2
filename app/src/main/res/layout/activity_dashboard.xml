@@ -14,69 +14,65 @@
         android:id="@+id/logout"
         android:layout_width="89dp"
         android:layout_height="38dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/logout"
         android:elevation="16dp"
         android:text="Logout"
         android:textColor="#000000"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="237dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/btn"
-        android:elevation="20dp"
-        android:orientation="vertical"
-        android:padding="5dp"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10sp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/calistoga"
-            android:gravity="center"
-            android:text="Hello"
-            android:textColor="#473B3B"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/QuestionBtn"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/button_shadow"
+        android:elevation="@dimen/_50sdp"
+        android:text="\?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toEndOf="@+id/logout"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="169dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/monaxia_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="325dp"
         android:layout_height="314dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:layout_weight="3"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <LinearLayout
             android:layout_width="314dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="2"
             android:orientation="horizontal">
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/physical_activity"
-                android:layout_width="145dp"
-                android:layout_height="145dp"
+                android:layout_width="148dp"
+                android:layout_height="147dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#86BCFF"
                 app:cardCornerRadius="14dp">
@@ -87,7 +83,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/yoga" />
+                    android:src="@drawable/lotus" />
 
                 <TextView
                     android:layout_width="153dp"
@@ -167,9 +163,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:layout_marginLeft="33dp"
+                    android:layout_marginStart="@dimen/_49sdp"
                     android:layout_marginBottom="15sp"
                     android:gravity="center"
-                    android:text="Notepad"
+                    android:text="Diary"
                     android:textSize="22dp"
                     android:textStyle="bold" />
 
@@ -196,6 +193,14 @@
                     android:text="Music Player"
                     android:textSize="22dp"
                     android:textStyle="bold" />
+
+<!--                <pl.droidsonroids.gif.GifImageView-->
+<!--                    android:layout_width="@dimen/_125sdp"-->
+<!--                    android:layout_height="@dimen/_114sdp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:src="@drawable/music_feat"/>-->
 
                 <ImageView
                     android:id="@+id/musicplayer"

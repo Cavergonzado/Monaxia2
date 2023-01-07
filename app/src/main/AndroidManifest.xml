@@ -16,6 +16,202 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Monaxia1">
         <activity
+            android:name=".MusicApp"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecliningBoundBtn"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".triangleYogaPose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Padmasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Adho_mukha_svanasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Reclining_Bound_angle_pose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Urdhva_Mukha_Svanasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Shishuasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Setu_Bandhasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Savasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".advancedYogaPose.Halasana"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.FishPose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.ExtendedPuppyPose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.ChildPose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.SeatedForwardBend"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.legsUpWallPose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.HeadToKneeForwardBend"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.StandingForwardBend"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.trianglePose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.treePose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".beginnerYogaPose.HeroPose"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.YogaExercises"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.advanceYoga"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.BeginnerPhysicalActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".breathingExerciseCountButton"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".musicPlayer.musicFeature"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.BreathingTimer"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.MusicFunction"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
@@ -35,6 +231,36 @@
         <activity
             android:name=".Dashboard"
             android:exported="false" />
+        <activity
+            android:name=".music.CloudburstMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.IntoTheBloomMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.LaffeyCrushMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.lovingYouMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.MetanoiaMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.MoodRelaxationMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.MusicSeeker"
+            android:exported="false" />
+        <activity
+            android:name=".music.RelaxingMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.SineMusic"
+            android:exported="false" />
+        <activity
+            android:name=".music.SteezyLettingGoMusic"
+            android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -47,12 +273,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".PlayerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MusicPlayer"
-            android:exported="false" />
         <activity
             android:name=".corpsePost"
             android:exported="false" />

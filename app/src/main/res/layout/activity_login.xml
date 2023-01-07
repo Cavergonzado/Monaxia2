@@ -9,6 +9,13 @@
     android:background="@drawable/landing_page"
     tools:context=".Login">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="169dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:src="@drawable/monaxia_logo" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

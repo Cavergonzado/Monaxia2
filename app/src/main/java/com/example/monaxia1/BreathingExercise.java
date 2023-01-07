@@ -1,8 +1,10 @@
 package com.example.monaxia1;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -22,6 +24,7 @@ public class BreathingExercise extends AppCompatActivity implements SettingsDial
 
     private ConstraintLayout contentLayout;
     private TextView statusText;
+    private MediaPlayer mySong;
     private View outerCircleView, innerCircleView;
     private FloatingActionButton fab;
     private ImageView arrowBack;
@@ -31,6 +34,13 @@ public class BreathingExercise extends AppCompatActivity implements SettingsDial
     private Handler handler = new Handler();
 
     private int holdDuration = 0;
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mySong.release();
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +56,8 @@ public class BreathingExercise extends AppCompatActivity implements SettingsDial
         outerCircleView = findViewById(R.id.v_circle_outer);
         innerCircleView = findViewById(R.id.v_circle_inner);
         arrowBack = findViewById(R.id.arrowBack);
+        mySong = MediaPlayer.create(BreathingExercise.this, R.raw.breathing_music_effect);
+        mySong.start();
 
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(fabClickListener);
@@ -55,6 +67,8 @@ public class BreathingExercise extends AppCompatActivity implements SettingsDial
         prepareAnimations();
         statusText.startAnimation(animationInhaleText);
         innerCircleView.startAnimation(animationInhaleInnerCircle);
+
+
 
         arrowBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,11 +159,9 @@ public class BreathingExercise extends AppCompatActivity implements SettingsDial
     private Animation.AnimationListener exhaleAnimationListener = new Animation.AnimationListener() {
         @Override
         public void onAnimationStart(Animation animation) {}
-
         @Override
         public void onAnimationEnd(Animation animation) {
             Log.d(TAG, "exhale animation end");
-            statusText.setText(Constants.HOLD);
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -157,7 +169,7 @@ public class BreathingExercise extends AppCompatActivity implements SettingsDial
                     statusText.startAnimation(animationInhaleText);
                     innerCircleView.startAnimation(animationInhaleInnerCircle);
                 }
-            }, holdDuration);
+            }, 0);
         }
 
         @Override

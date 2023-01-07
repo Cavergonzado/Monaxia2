@@ -7,19 +7,30 @@
     android:background="@drawable/landing_page"
     tools:context=".activities.NoteFunction">
 
+
+    <ImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toStartOf="@+id/textNote"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textNote"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Notes"
-        android:layout_marginStart="@dimen/_12sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="160dp"
         android:fontFamily="@font/ubuntu_bold1"
-        android:textColor="@color/black"
+        android:text="My Notes"
+        android:textColor="#F6F6F6"
         android:textSize="@dimen/_20ssp"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/layoutSearch"
@@ -54,7 +65,7 @@
             android:imeOptions="actionDone"
             android:importantForAutofill="no"
             android:includeFontPadding="false"
-            android:hint="Search Notes"
+            android:hint="Search Diaries"
             android:inputType="text"
             android:textColor="@color/white"
             android:textColorHint="@color/colorTextHint"

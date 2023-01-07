@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.monaxia1.R;
 import com.example.monaxia1.database.NotesDatabase;
-import com.example.monaxia1.entities.NoteClass;
+import com.example.monaxia1.entities.Notes;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import java.text.SimpleDateFormat;
@@ -36,7 +36,7 @@ public class CreateNoteActivity extends AppCompatActivity {
 
     private String selectedNoteColor;
 
-    private  NoteClass alreadyAvailableNote;
+    private Notes alreadyAvailableNote;
     private AlertDialog dialogDeleteNote;
 
     @Override
@@ -68,7 +68,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         setSubtitleIndicatorColor();
 
         if(getIntent().getBooleanExtra("isViewOrUpdate", false)){
-            alreadyAvailableNote = (NoteClass) getIntent().getSerializableExtra("note");
+            alreadyAvailableNote = (Notes) getIntent().getSerializableExtra("note");
             setViewOrUpdateNote();
         }
 
@@ -101,15 +101,15 @@ public class CreateNoteActivity extends AppCompatActivity {
             return;
         }
 
-        final NoteClass noteClass = new NoteClass();
-        noteClass.setTitle(inputNoteTitle.getText().toString());
-        noteClass.setSubTitle(inputNoteSubTitle.getText().toString());
-        noteClass.setNoteText(inputNoteText.getText().toString());
-        noteClass.setDatetime(textDateTime.getText().toString());
-        noteClass.setColor(selectedNoteColor);
+        final Notes notes = new Notes();
+        notes.setTitle(inputNoteTitle.getText().toString());
+        notes.setSubTitle(inputNoteSubTitle.getText().toString());
+        notes.setNoteText(inputNoteText.getText().toString());
+        notes.setDatetime(textDateTime.getText().toString());
+        notes.setColor(selectedNoteColor);
 
         if(alreadyAvailableNote != null){
-            noteClass.setId(alreadyAvailableNote.getId());
+            notes.setId(alreadyAvailableNote.getId());
         }
 
         @SuppressLint("StaticFieldLeak")
@@ -117,7 +117,7 @@ public class CreateNoteActivity extends AppCompatActivity {
 
             @Override
             protected Void doInBackground(Void... voids) {
-                NotesDatabase.getDatabase(getApplicationContext()).noteDao().insertNote(noteClass);
+                NotesDatabase.getDatabase(getApplicationContext()).noteDao().insertNote( notes);
                 return null;
             }
 
@@ -262,6 +262,7 @@ public class CreateNoteActivity extends AppCompatActivity {
             view.findViewById(R.id.textDeleteNote).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    @SuppressLint("StaticFieldLeak")
                     class DeleteNoteTask extends AsyncTask<Void, Void, Void>{
 
                         @Override
@@ -280,7 +281,9 @@ public class CreateNoteActivity extends AppCompatActivity {
                             finish();
                         }
                     }
+
                     new DeleteNoteTask().execute();
+
                 }
             });
             view.findViewById(R.id.textCancel).setOnClickListener(new View.OnClickListener() {
