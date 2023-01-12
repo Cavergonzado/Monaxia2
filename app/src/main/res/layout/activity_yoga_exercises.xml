@@ -20,6 +20,7 @@
         app:titleTextColor="#FFF"
         android:gravity="end"/>
 
+
     <ImageView
         android:id="@+id/arrowBack"
         android:layout_width="wrap_content"
@@ -28,21 +29,39 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/ic_baseline_arrow_back_24" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose"
+        android:textSize="@dimen/_27sdp"
+        android:layout_gravity="center"
+        android:textColor="#393939"
+        android:fontFamily="@font/ubuntu_bold1"
+        android:layout_marginTop="@dimen/_30sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="your skill level"
+        android:textSize="@dimen/_27sdp"
+        android:layout_gravity="center"
+        android:textColor="#FF393939"
+        android:fontFamily="@font/ubuntu_bold1"
+        android:layout_marginTop="@dimen/_5sdp"/>
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="374dp"
-        android:layout_height="172dp"
-        android:layout_marginTop="@dimen/_200sdp"
+        android:layout_width="358dp"
+        android:layout_height="166dp"
         android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_70sdp"
         android:gravity="center">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/beginnerBtn"
-            android:layout_width="173dp"
-            android:layout_height="match_parent"
+            android:layout_width="161dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:backgroundTint="#86BCFF"
             app:cardCornerRadius="14dp">
@@ -59,7 +78,7 @@
                 android:layout_width="153dp"
                 android:layout_height="40dp"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="2dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginBottom="5sp"
                 android:gravity="center"
                 android:text="Beginner"
@@ -71,8 +90,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/advanceBtn"
-            android:layout_width="176dp"
-            android:layout_height="172dp"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:backgroundTint="#FBB579"
@@ -80,18 +99,17 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="88dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="40sp"
+                android:layout_height="98dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
                 android:adjustViewBounds="true"
-                android:src="@drawable/breathing" />
+                android:src="@drawable/advance_yoga" />
 
             <TextView
                 android:layout_width="153dp"
                 android:layout_height="40dp"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="2dp"
+                android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginBottom="5sp"
                 android:gravity="center"
                 android:text="Advanced"

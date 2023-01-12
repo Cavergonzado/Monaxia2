@@ -21,7 +21,7 @@ import java.util.Locale;
 
 public class Shishuasana extends AppCompatActivity {
 
-    private static final long START_TIME_IN_MILLIS = 3000000;
+    private static final long START_TIME_IN_MILLIS = 600000;
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;

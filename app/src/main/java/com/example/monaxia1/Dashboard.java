@@ -30,9 +30,6 @@ public class Dashboard extends AppCompatActivity {
         logout = findViewById(R.id.logout);
         dashIntruction = findViewById(R.id.QuestionBtn);
 
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("NAME");
-
         dashIntruction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

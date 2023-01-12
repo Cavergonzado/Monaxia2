@@ -21,7 +21,7 @@ import java.util.Locale;
 
 public class Urdhva_Mukha_Svanasana extends AppCompatActivity {
 
-    private static final long START_TIME_IN_MILLIS = 3000000;
+    private static final long START_TIME_IN_MILLIS = 30000;
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;

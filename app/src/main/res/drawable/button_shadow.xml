@@ -9,7 +9,7 @@
     <!-- White foreground. -->
     <item android:bottom="2dp">
         <shape>
-            <solid android:color="#FFE605" />
+            <solid android:color="#FFE2BE" />
             <corners android:radius="15dp" />
         </shape>
     </item>

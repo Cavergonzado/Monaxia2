@@ -390,7 +390,7 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textColor="#ffff5722"
-                            android:text="5 Seconds"
+                            android:text="30 Seconds"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
 

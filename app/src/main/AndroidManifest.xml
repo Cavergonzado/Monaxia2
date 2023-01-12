@@ -16,21 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Monaxia1">
         <activity
-            android:name=".MusicApp"
+            android:name=".beginnerYogaPose.FishPose"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RecliningBoundBtn"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".triangleYogaPose"
+            android:name=".advancedYogaPose.triangleYogaPose"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -87,13 +80,6 @@
         </activity>
         <activity
             android:name=".advancedYogaPose.Halasana"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".beginnerYogaPose.FishPose"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -230,36 +216,6 @@
             android:exported="false" />
         <activity
             android:name=".Dashboard"
-            android:exported="false" />
-        <activity
-            android:name=".music.CloudburstMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.IntoTheBloomMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.LaffeyCrushMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.lovingYouMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.MetanoiaMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.MoodRelaxationMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.MusicSeeker"
-            android:exported="false" />
-        <activity
-            android:name=".music.RelaxingMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.SineMusic"
-            android:exported="false" />
-        <activity
-            android:name=".music.SteezyLettingGoMusic"
             android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -22,7 +22,7 @@ import java.util.Locale;
 
 public class ChildPose extends AppCompatActivity {
 
-    private static final long START_TIME_IN_MILLIS = 3000000;
+    private static final long START_TIME_IN_MILLIS = 300000;
 
     private TextView mTextViewCountDown;
     private Button mButtonStartPause;
