@@ -136,7 +136,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/ubuntu_bold1"
         android:text="@string/settings_title"
-        android:textColor="#FD4207"
+        android:textColor="@color/colorFontSkyBlue"
         android:textSize="@dimen/settings_title_text_size"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"

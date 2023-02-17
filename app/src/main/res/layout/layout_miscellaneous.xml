@@ -146,6 +146,17 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/colorFeelings"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Color meaning click me"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="#0D6AA8"/>
+
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="@dimen/_35sdp"

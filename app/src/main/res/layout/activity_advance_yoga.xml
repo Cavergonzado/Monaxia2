@@ -73,7 +73,7 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:layout_marginStart="@dimen/_3sdp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="1 Minute"
                             android:textStyle="bold"/>
 
@@ -152,7 +152,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:text="5 Minutes"
                             android:textStyle="bold"/>
@@ -234,7 +234,7 @@
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:layout_marginStart="@dimen/_3sdp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="1 Minute"
                             android:textStyle="bold"/>
 
@@ -310,7 +310,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="1 Minute"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
@@ -390,7 +390,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="30 seconds"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
@@ -468,7 +468,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="1 Minute"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
@@ -545,7 +545,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="1 Minutes"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
@@ -620,7 +620,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="30 seconds"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
@@ -696,7 +696,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="1 Minute"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>
@@ -771,7 +771,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
-                            android:textColor="#ffff5722"
+                            android:textColor="@color/colorFontSkyBlue"
                             android:text="5 Minutes"
                             android:layout_marginStart="@dimen/_3sdp"
                             android:textStyle="bold"/>

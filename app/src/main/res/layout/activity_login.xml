@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/landing_page"
+    android:background="@drawable/laaanding_page"
     tools:context=".Login">
 
     <ImageView
@@ -52,7 +52,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/active"
+        app:passwordToggleTint="#80CCCC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/active"
+        android:textColor="#4F9F9F"
         android:backgroundTint="#02000000"
         android:fontFamily="@font/ubuntu_regular"
         android:text="Forgot Password?"/>

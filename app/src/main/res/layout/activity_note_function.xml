@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/landing_page"
+    android:background="@drawable/laaanding_page"
     tools:context=".activities.NoteFunction">
 
 

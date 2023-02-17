@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/landing_page"
+    android:background="@drawable/laaanding_page"
     tools:context=".breathingExerciseCountButton">
 
     <ImageView
@@ -20,13 +20,13 @@
     <TextView
         android:layout_width="345dp"
         android:layout_height="53dp"
-        android:background="#FDF7EC"
+        android:background="#FFF"
         android:elevation="@dimen/_10sdp"
         android:fontFamily="@font/ubuntu_bold1"
         android:padding="@dimen/_10sdp"
         android:text="Press the button to start"
         android:textAllCaps="true"
-        android:textColor="#FF6534"
+        android:textColor="@color/colorFontSkyBlue"
         android:gravity="center"
         android:textSize="@dimen/_21sdp"
         app:layout_constraintBottom_toTopOf="@+id/pulseCountDown"

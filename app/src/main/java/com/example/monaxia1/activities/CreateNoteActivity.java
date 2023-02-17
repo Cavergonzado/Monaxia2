@@ -20,6 +20,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.monaxia1.R;
+import com.example.monaxia1.advanceYogaDialog.AdhoMukhaSvanasanaDialog;
 import com.example.monaxia1.database.NotesDatabase;
 import com.example.monaxia1.entities.Notes;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -31,7 +32,8 @@ import java.util.Locale;
 public class CreateNoteActivity extends AppCompatActivity {
 
     private EditText inputNoteTitle, inputNoteSubTitle, inputNoteText;
-    private TextView textDateTime;
+    private TextView textDateTime, Instruction;
+    private LinearLayout deleteNote;
     private View viewSubtitleIndicator;
 
     private String selectedNoteColor;
@@ -48,6 +50,8 @@ public class CreateNoteActivity extends AppCompatActivity {
         inputNoteSubTitle = findViewById(R.id.inputSubtitle);
         inputNoteText = findViewById(R.id.inputNote);
         textDateTime = findViewById(R.id.textDateTime);
+        deleteNote = findViewById(R.id.layoutDeleteNote);
+        Instruction = findViewById(R.id.colorFeelings);
         viewSubtitleIndicator  =findViewById(R.id.viewSubtitle);
         textDateTime.setText(
                 new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm a", Locale.getDefault())
@@ -59,6 +63,20 @@ public class CreateNoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveNote();
+            }
+        });
+
+        Instruction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDialog();
+            }
+        });
+
+        deleteNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDeleteNoteDialog();
             }
         });
 
@@ -78,7 +96,14 @@ public class CreateNoteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 onBackPressed();
             }
+
+
         });
+    }
+
+    private void openDialog() {
+        ColorMeaningDialog dialogReverse = new ColorMeaningDialog();
+        dialogReverse.show(getSupportFragmentManager(), "Example Dialog");
     }
 
     private  void setViewOrUpdateNote(){
@@ -247,12 +272,13 @@ public class CreateNoteActivity extends AppCompatActivity {
 
     }
 
+
     private  void showDeleteNoteDialog(){
         if(dialogDeleteNote == null){
             AlertDialog.Builder builder = new AlertDialog.Builder(CreateNoteActivity.this);
             View view = LayoutInflater.from(this).inflate(
                     R.layout.layout_delete_note,
-                    (ViewGroup)  findViewById(R.id.layoutDeleteNoteContainer)
+                    (ViewGroup) findViewById(R.id.layoutDeleteNoteContainer)
             );
             builder.setView(view);
             dialogDeleteNote = builder.create();

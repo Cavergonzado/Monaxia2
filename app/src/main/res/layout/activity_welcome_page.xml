@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/landing_page"
+    android:background="@drawable/laaanding_page"
     tools:context=".Welcome_Page">
 
     <Button
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#FF7347"
+        android:background="#80CCCC"
         android:text="Back"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="#FF7347"
+        android:background="#80CCCC"
         android:text="Next"
         android:textColor="@color/black"
         android:textSize="20sp"

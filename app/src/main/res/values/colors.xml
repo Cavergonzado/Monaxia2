@@ -46,4 +46,8 @@
     <color name="colorNoteColor5">#000000</color>
     <color name="colorDelete">#FF4842</color>
     <color name="colorSearchBg">#333333</color>
+
+
+    <color name="colorSkyblue">#80CCCC</color>
+    <color name="colorFontSkyBlue">#4F9F9F</color>
 </resources>
