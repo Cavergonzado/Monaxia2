@@ -45,7 +45,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnPlay"
+            android:id="@+id/imagePlayPauseBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"

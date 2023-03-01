@@ -29,11 +29,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
-
-    <SeekBar
-        android:layout_weight="0"
-        android:id="@+id/seekBar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-2dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toEndOf="@+id/startTime"
+            android:layout_weight="0" />
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="00:00"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="12sp"
+            android:layout_marginEnd="-25dp"
+            android:layout_alignEnd="@+id/seekBar"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="16dp"/>
+    </RelativeLayout>
 </LinearLayout>

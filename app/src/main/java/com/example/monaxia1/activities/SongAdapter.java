@@ -6,9 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.monaxia1.R;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
@@ -23,7 +26,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
     }
 
     public interface OnItemClickListener {
-        void onItemClick(Button b , View view, SongInfo obj, int position);
+        void onItemClick(Button b , View view, SongInfo obj, int position) throws IOException;
     }
 
     public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
@@ -47,7 +50,11 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
             @Override
             public void onClick(View v) {
                 if (mOnItemClickListener != null) {
-                    mOnItemClickListener.onItemClick(songHolder.btnAction,v, s, i);
+                    try {
+                        mOnItemClickListener.onItemClick(songHolder.btnAction,v, s, i);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -65,7 +72,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongHolder> {
             super(itemView);
             tvSongName = (TextView) itemView.findViewById(R.id.tvSongName);
             tvSongArtist = (TextView) itemView.findViewById(R.id.tvArtistName);
-            btnAction = (Button) itemView.findViewById(R.id.btnPlay);
+            btnAction = (Button) itemView.findViewById(R.id.imagePlayPauseBtn);
         }
     }
 }

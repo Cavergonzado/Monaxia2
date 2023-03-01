@@ -67,7 +67,7 @@
             android:includeFontPadding="false"
             android:hint="Search Diaries"
             android:inputType="text"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/colorTextHint"
             android:textSize="@dimen/_13ssp"/>
 
